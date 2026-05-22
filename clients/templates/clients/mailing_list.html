@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рассылки</title>
+</head>
+<body>
+    <h1>Список рассылок</h1>
+    <ul>
+        {% for mailing in mailings %}
+            <li>{{ mailing.message.subject }} ({{ mailing.status }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

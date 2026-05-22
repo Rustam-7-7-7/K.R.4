@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Получатели</title>
+</head>
+<body>
+    <h1>Список получателей</h1>
+    <ul>
+        {% for recipient in recipients %}
+            <li>{{ recipient.full_name }} - {{ recipient.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
