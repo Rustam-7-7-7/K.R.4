@@ -8,8 +8,13 @@
     <h1>Список сообщений</h1>
     <ul>
         {% for message in messages %}
-            <li>{{ message.subject }} - {{ message.body }}</li>
+            <li>
+                {{ message.subject }} - {{ message.body }}
+                <a href="{% url 'message_edit' message.pk %}">Редактировать</a>
+                <a href="{% url 'message_delete' message.pk %}">Удалить</a>
+            </li>
         {% endfor %}
     </ul>
+    <a href="{% url 'message_new' %}">Добавить новое сообщение</a>
 </body>
 </html>

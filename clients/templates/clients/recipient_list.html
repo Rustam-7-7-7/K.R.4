@@ -8,8 +8,13 @@
     <h1>Список получателей</h1>
     <ul>
         {% for recipient in recipients %}
-            <li>{{ recipient.full_name }} - {{ recipient.email }}</li>
+            <li>
+                {{ recipient.full_name }} - {{ recipient.email }}
+                <a href="{% url 'recipient_edit' recipient.pk %}">Редактировать</a>
+                <a href="{% url 'recipient_delete' recipient.pk %}">Удалить</a>
+            </li>
         {% endfor %}
     </ul>
+    <a href="{% url 'recipient_new' %}">Добавить нового получателя</a>
 </body>
 </html>
