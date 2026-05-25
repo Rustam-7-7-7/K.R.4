@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Статистика</title>
+</head>
+<body>
+    <h1>Статистика</h1>
+    <h2>Общая информация</h2>
+    <ul>
+        <li>Общее количество рассылок: {{ total_mailings }}</li>
+        <li>Активные рассылки: {{ active_mailings }}</li>
+    </ul>
+    <h2>Попытки отправки</h2>
+    <ul>
+        <li>Общее количество попыток: {{ total_attempts }}</li>
+        <li>Успешные попытки: {{ successful_attempts }}</li>
+        <li>Неуспешные попытки: {{ unsuccessful_attempts }}</li>
+    </ul>
+</body>
+</html>
